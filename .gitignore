@@ -3,3 +3,7 @@
 
 # Raw dataset — large, third-party licensed, downloaded separately (see README)
 Data/medium_posts.csv
+
+# Article draft and exported chart assets — not part of the code repo
+MEDIUM_ARTICLE_FINAL.md
+medium_assets/
