@@ -1,23 +1,23 @@
 # Medium Posts Time Series Forecasting
 
-Forecasting the daily number of posts published on [Medium](https://medium.com/) with [Prophet](https://facebook.github.io/prophet/), Meta's decomposable time-series forecasting library — and checking, at every step, whether the added modeling complexity actually earns its keep against a simple seasonal-naive benchmark.
+Forecasting the daily number of posts published on [Medium](https://medium.com/) with [Prophet](https://facebook.github.io/prophet/), Meta's decomposable time-series forecasting library. At every step, the analysis checks whether the added modeling complexity actually earns its keep against a simple seasonal-naive benchmark.
 
-📄 **Read the full write-up:** *[link coming soon]*
+📄 **Read the full write-up:** https://medium.com/@nahid.nm57/when-prophet-loses-to-repeat-last-week-which-model-is-actually-teaching-you-something-110e060b9b4e?sharedUserId=nahid.nm57
 
 ## What's inside
 
 The notebook (`medium_posts_time_series_forecasting.ipynb`) walks through the full workflow:
 
-1. **Data audit and cleaning** — inspecting ~92k raw Medium post records for implausible timestamps, duplicate URLs, and a partially observed final day, then aggregating cleaned records into a daily post-count series (2012-08-15 to 2017-06-26).
-2. **Exploratory analysis** — trend, weekday/weekend seasonality, and variance behavior of the daily series.
+1. **Data audit and cleaning**: inspecting ~92k raw Medium post records for implausible timestamps, duplicate URLs, and a partially observed final day, then aggregating cleaned records into a daily post-count series (2012-08-15 to 2017-06-26).
+2. **Exploratory analysis**: trend, weekday/weekend seasonality, and variance behavior of the daily series.
 3. **Prophet modeling**
    - A baseline Prophet model fit with default settings.
    - A Box–Cox-transformed Prophet model to address variance that grows with the level of the series.
    - A 7-day seasonal-naive benchmark for comparison.
-4. **Evaluation** — a single 30-day held-out window, plus a 5-fold rolling-origin (expanding-window) evaluation to check whether the single-window result generalizes.
-5. **Forecasting** — refitting the selected specification on the full history and producing a 30-day forecast beyond the end of the data, including an illustrative bias-aware back-transformation of the Box–Cox predictions.
+4. **Evaluation**: a single 30-day held-out window, plus a 5-fold rolling-origin (expanding-window) evaluation to check whether the single-window result generalizes.
+5. **Forecasting**: refitting the selected specification on the full history and producing a 30-day forecast beyond the end of the data, including an illustrative bias-aware back-transformation of the Box–Cox predictions.
 
-**Key finding:** Box–Cox Prophet clearly outperforms baseline Prophet, but the simple seasonal-naive benchmark remains competitive and sometimes wins outright, depending on the forecast origin — a reminder to always validate model complexity against a simple baseline before trusting it.
+**Key finding:** Box–Cox Prophet clearly outperforms baseline Prophet, but the simple seasonal-naive benchmark remains competitive and sometimes wins outright, depending on the forecast origin. That's a reminder to always validate model complexity against a simple baseline before trusting it.
 
 ## Dataset
 
