@@ -1,0 +1,5 @@
+# OS clutter
+.DS_Store
+
+# Raw dataset — large, third-party licensed, downloaded separately (see README)
+Data/medium_posts.csv
