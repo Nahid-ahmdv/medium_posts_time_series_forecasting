@@ -2,7 +2,7 @@
 
 Forecasting the daily number of posts published on [Medium](https://medium.com/) with [Prophet](https://facebook.github.io/prophet/), Meta's decomposable time-series forecasting library. At every step, the analysis checks whether the added modeling complexity actually earns its keep against a simple seasonal-naive benchmark.
 
-📄 **Read the full write-up:** https://medium.com/@nahid.nm57/when-prophet-loses-to-repeat-last-week-which-model-is-actually-teaching-you-something-110e060b9b4e?sharedUserId=nahid.nm57
+📄 **Read the full write-up:** https://medium.com/the-quantastic-journal/when-prophet-loses-to-repeat-last-week-which-model-is-actually-teaching-you-something-23a084090242
 
 ## What's inside
 
