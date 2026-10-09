@@ -15,7 +15,9 @@ The notebook (`medium_posts_time_series_forecasting.ipynb`) walks through the fu
    - A Box–Cox-transformed Prophet model to address variance that grows with the level of the series.
    - A 7-day seasonal-naive benchmark for comparison.
 4. **Evaluation**: a single 30-day held-out window, plus a 5-fold rolling-origin (expanding-window) evaluation to check whether the single-window result generalizes.
-5. **Forecasting**: refitting the selected specification on the full history and producing a 30-day forecast beyond the end of the data, including an illustrative bias-aware back-transformation of the Box–Cox predictions.
+5. **Forecasting**: refitting the selected specification on the full history and producing a 30-day forecast beyond the end of the data, including an illustrative Monte Carlo estimate of the original-scale predictive mean (conditional on Prophet's MAP fit).
+
+The notebook was revised in October 2026 after editorial review for The Quantastic Journal. Each change is marked with a green, collapsible "Revision note" cell explaining what changed and why.
 
 **Key finding:** Box–Cox Prophet clearly outperforms baseline Prophet, but the simple seasonal-naive benchmark remains competitive and sometimes wins outright, depending on the forecast origin. That's a reminder to always validate model complexity against a simple baseline before trusting it.
 
@@ -33,7 +35,7 @@ Data/medium_posts.csv
 
 ### Requirements
 
-- Python 3.9+
+- Python 3.10 (tested with Prophet 1.4.0)
 - Jupyter (Notebook or Lab)
 
 ### Installation
