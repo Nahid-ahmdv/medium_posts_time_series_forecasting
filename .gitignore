@@ -6,4 +6,6 @@ Data/medium_posts.csv
 
 # Article draft and exported chart assets — not part of the code repo
 MEDIUM_ARTICLE_FINAL.md
+NOTEBOOK_UPDATES.md
 medium_assets/
+*.pdf
